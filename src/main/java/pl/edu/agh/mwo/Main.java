@@ -1,14 +1,22 @@
 package pl.edu.agh.mwo;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+        Commands commands = new Commands();
+
+        //System.out.println(FileReader.getTasks());
 
         if(args.length!=0) {
             if (args[0].contains("start")
                     && args[1].contains("-p")
                     && args[3].contains("-t")) {
                 System.out.println("app started, start class to be called with two arguments (args[2] - project name,args[4] - task name)");
+                commands.start(args[2], args[4]);
+                System.out.println(FileReader.getTasks());
             }
             if (args[0].contains("stop")) {
                 System.out.println("app stopped, stop class to be called");
