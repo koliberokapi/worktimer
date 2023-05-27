@@ -31,8 +31,4 @@ public record Task(LocalDateTime start, LocalDateTime stop, String projectName, 
                 vals.get(3)
         );
     }
-
-    private static String trimQuotes(String s) {
-        return s.substring(1, s.length() - 1);
-    }
 }
