@@ -5,4 +5,5 @@
 .logo
 .idea
 /target/
-.~lock.log.csv#
+*.~lock.log.csv#
+*log.csv~
