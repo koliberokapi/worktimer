@@ -2,6 +2,19 @@ package pl.edu.agh.mwo;
 
 public class Main {
 
+    public static void helpPrinter() {
+        System.out.println(
+                "Please use one of following arguments:\n" +
+                        "start -p \"Project Name\" -t \"Task Name\": to start new action, if project or task not exist it will be created automatically\n" +
+                        "stop: to stop action\n"+
+                        "continue: to continue last action\n"+
+                        "last: to display running tasks\n"+
+                        "list: to display list of all tasks in time\n"+
+                        "report: to display report of actions with summary\n"+
+                        "help: to display all options\n"
+
+        );
+    }
     public static void main(String[] args) {
 
         if(args.length!=0) {
@@ -25,15 +38,12 @@ public class Main {
             if(args[0].contains("report")){
                 System.out.println("report with args[1] without first two -- in argument of class");
             }
-            if(args[0].contains("help")){
-                HelpPrinter printer = new HelpPrinter();
-                printer.helpPrinter();
+            else{
+                helpPrinter();
             }
         }
         else{
-            HelpPrinter printer = new HelpPrinter();
-            printer.helpPrinter();
+            helpPrinter();
         }
-
     }
 }
