@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 
 public class Main {
 
-
     public static void helpPrinter() {
         System.out.println(
                 "Please use one of following arguments:\n" +
@@ -30,7 +29,7 @@ public class Main {
                 commands.start(args[2], args[4]);
             }
             else if (args[0].contains("stop")) {
-                System.out.println("app stopped, stop class to be called");
+                commands.stop();
             }
             else if (args[0].contains("continue")) {
                 System.out.println("app started, buy without arguments, last run project");
