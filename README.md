@@ -24,16 +24,16 @@ Aplikacja - rejestrator czasu pracy nad projektami
 
 ## Komendy 
 
-| Komenda       | Opis                  |
-| ------------- | ------------------------------ |
-| `help`   | Wyświetla wszystkie opcje programu |
-| `start`      | Tworzy nowy log do projektu i tasku, zapisuje czas startu pracy     |
-| `stop`   | Zapisuje czas zakończenia pracy w logu |
-| `continue` + param  | Kontynuuje zapisane zadanie zgodnie z liczbą wskazaną w parametrze (domyślnie ostanie) |
-| `last` + param | Wyświetla ostatnie zadania zgodnie z liczbą wskazaną w parametrze (domyślnie 5) |
-   | `list`   | Wypisuje projekty i taski wraz z czasami startu i zatrzymania     |
-| `report`   | Generuje raport czasu pracy nad taskami i projektami  |
-| `file`   | Zmiana źródła pliku  |
+| Komenda            | Opis                  |
+|--------------------| ------------------------------ |
+| `help`             | Wyświetla wszystkie opcje programu |
+| `start` + param    | Tworzy nowy log do projektu i tasku, zapisuje czas startu pracy     |
+| `stop`             | Zapisuje czas zakończenia pracy w logu |
+| `continue` + param | Kontynuuje zapisane zadanie zgodnie z liczbą wskazaną w parametrze (domyślnie ostanie) |
+| `last` + param     | Wyświetla ostatnie zadania zgodnie z liczbą wskazaną w parametrze (domyślnie 5) |
+   | `list`  + param            | Wypisuje projekty i taski wraz z czasami startu i zatrzymania     |
+| `report`           | Generuje raport czasu pracy nad taskami i projektami  |
+| `file` + param     | Zmiana źródła pliku  |
 
 
 ## Raporty
@@ -53,13 +53,13 @@ Aplikacja - rejestrator czasu pracy nad projektami
 
 ## Lista wywołań
 
-| Nazwa funkcji | Wywołanie funkcji                    |
-| ------------- | ------------------------------ |
-| `start`      | java -jar worktimer-1.0.jar start -p "mwo" -t "task1"     |
-| `stop`   | java -jar worktimer-1.0.jar stop    |
-| `continue` |  continue  |
-| `last` |  last 6  |
-| `list`   |  list --today  |
-| `file`   | -f "newFile.csv"     |
-| `help`   |  -help |
+| Nazwa funkcji | Wywołanie funkcji                                     |
+| ------------- |-------------------------------------------------------|
+| `start`      | java -jar worktimer-1.0.jar start -p "mwo" -t "task1" |
+| `stop`   | java -jar worktimer-1.0.jar stop                      |
+| `continue` | continue 2                                            |
+| `last` | last 6                                                |
+| `list`   | list --today --current-month --previous-month         |
+| `file`   | -f newFile.csv                                        |
+| `help`   | -help                                                 |
 
