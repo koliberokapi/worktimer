@@ -13,7 +13,6 @@ public class WorkTimer {
             if (args[0].contains("start")
                     && args[1].contains("-p")
                     && args[3].contains("-t")) {
-                System.out.println("app started, start class to be called with two arguments (args[2] - project name,args[4] - task name)");
                 commands.start(args[2], args[4]);
             }
             else if (args[0].contains("stop")) {
@@ -34,15 +33,14 @@ public class WorkTimer {
                 commands.last(lastCount, true);
             }
             else if (args[0].contains("list")) {
-                System.out.println("list of all tasks");
                 commands.list(args[1]);
             }
             else if (args[0].contains("report")) {
-                System.out.println("report with args[1] without first two -- in argument of class");
+                ReportCalc report = new ReportCalc();
+                report.calculateReport();
             }
             else if (args[0].contains("file") && args[1].contains("-f")) {
                 commands.changeFile(args[2]);
-                System.out.println("changing source file");
             } else {
                 helpPrinter();
             }
