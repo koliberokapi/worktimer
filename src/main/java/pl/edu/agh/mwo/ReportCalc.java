@@ -67,6 +67,7 @@ public class ReportCalc {
         }
 
         for (Task task : listForReport) {
+            if(task.getStop()==null){continue;}
             long dateStop = convertTimesFromLocalToMillisec(task.getStop());
             long dateStart = convertTimesFromLocalToMillisec(task.getStart());
             long duration = dateStop - dateStart;
