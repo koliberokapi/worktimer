@@ -25,12 +25,12 @@ Aplikacja - rejestrator czasu pracy nad projektami
 
 | Komenda       | Opis                  |
 | ------------- | ------------------------------ |
-| `start()`      | Tworzy nowy log do projektu i tasku, zapisuje czas startu pracy     |
-| `stop()`   | Zapisuje czas zakończenia pracy w logu |
-| `continue()`   |   |
-| `last()`   | |
-   | `list()`   | Wypisuje projekty i taski wraz z czasami startu i zatrzymania     |
-| `report()`   | Generuje raport za wybrany okres  |
+| `start`      | Tworzy nowy log do projektu i tasku, zapisuje czas startu pracy     |
+| `stop`   | Zapisuje czas zakończenia pracy w logu |
+| `continue`   |   |
+| `last`   | |
+   | `list`   | Wypisuje projekty i taski wraz z czasami startu i zatrzymania     |
+| `report`   | Generuje raport za wybrany okres  |
 
 
 ## Raporty
