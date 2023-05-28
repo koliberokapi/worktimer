@@ -40,7 +40,7 @@ public class WorkTimer {
         } else {
             helpPrinter();
         }
-        commands.changeFile("log.csv");
+
     }
     public static void helpPrinter() {
         System.out.println(
