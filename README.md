@@ -1,4 +1,4 @@
-## WORKTIMER
+# WORKTIMER
 
 Aplikacja - rejestrator czasu pracy nad projektami
 
@@ -15,14 +15,38 @@ Aplikacja - rejestrator czasu pracy nad projektami
 
 ![](https://user-images.githubusercontent.com/108087334/241393094-2be08aa1-0e01-43b1-9dac-72a38072ee98.png)
 
-### Cechy: 
+  ## Cechy: 
 + 8 klas
 + plik .csv dla logów
 + plik .jar 
 + ....
+
+## Komendy 
+
+| Komenda       | Opis                  |
+| ------------- | ------------------------------ |
+| `start()`      | Tworzy nowy log do projektu i tasku, zapisuje czas startu pracy     |
+| `stop()`   | Zapisuje czas zakończenia pracy w logu |
+| `continue()`   |   |
+| `last()`   | |
+   | `list()`   | Wypisuje projekty i taski wraz z czasami startu i zatrzymania     |
+| `report()`   | Generuje raport za wybrany okres  |
+
 
 ## Raporty
 - dla przedziałów czasowych: 
    + raport dzienny
    + raport za ostatni miesiąc (ostatnie 30 dni)
    + raport za poprzedni miesiąc kalendarzowyktimer
+
+| PROJEKT  | TASK  | CZAS PRACY |
+| :------------ |:---------------:| -----:|
+| PROJEKT      |  | 5h 20min |
+|      | Zadanie 1        |  1h 20 min |
+|  | Zadanie 2      |    2h |
+|  | Zadanie 3      |    1h 30min |
+|  | Zadanie 4      |   30 min |
+| PROGRAM      |  | 1h 30min |
+|      | Opis       |  1h   |
+|  | Wygląd     |    30min |
+
