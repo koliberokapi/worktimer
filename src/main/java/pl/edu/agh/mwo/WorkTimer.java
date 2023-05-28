@@ -28,7 +28,8 @@ public class WorkTimer {
                 System.out.println("list of all tasks");
             }
             else if (args[0].contains("report")) {
-                System.out.println("report with args[1] without first two -- in argument of class");
+                ReportCalc report = new ReportCalc();
+                report.calculateReport();
             } else {
                 helpPrinter();
             }

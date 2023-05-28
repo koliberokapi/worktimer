@@ -10,6 +10,38 @@ public class Task {
     String projectName;
     String taskName;
 
+    public LocalDateTime getStart() {
+        return start;
+    }
+
+    public void setStart(LocalDateTime start) {
+        this.start = start;
+    }
+
+    public LocalDateTime getStop() {
+        return stop;
+    }
+
+    public void setStop(LocalDateTime stop) {
+        this.stop = stop;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public String getTaskName() {
+        return taskName;
+    }
+
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
+    }
+
     public Task (LocalDateTime start, LocalDateTime stop, String projectName, String taskName) {
         this.start = start;
         this.stop = stop;
