@@ -19,11 +19,15 @@ public class WorkTimer {
                 commands.stop();
             }
             else if (args[0].contains("continue")) {
-                int index = Integer.parseInt(args[1]);
+                int index;
+                if (args.length < 2) {
+                    index = 0;
+                } else {
+                    index = Integer.parseInt(args[1]);
+                }
                 commands.resume(index);
             }
             else if (args[0].contains("last")) {
-                System.out.println("list of last tasks with indexes");
                 int lastCount;
                 if (args.length < 2) {
                     lastCount = 5;
