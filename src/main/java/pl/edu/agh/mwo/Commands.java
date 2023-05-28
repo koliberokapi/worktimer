@@ -101,4 +101,8 @@ public class Commands {
         envManager.setNewLogFileName(fileName);
     }
 
+    public void report(ReportGenerator reportGenerator, ReportCalc reportCalc) {
+        reportGenerator.displayReport(reportCalc);
+    }
+
 }
