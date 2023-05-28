@@ -2,6 +2,7 @@
 
 package pl.edu.agh.mwo;
 
+import java.io.FileNotFoundException;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -53,7 +54,7 @@ public class ReportCalc {
         return (sb.toString());
     }
 
-    public HashMap<String, HashMap<String, Long>> calculateReport() {
+    public HashMap<String, HashMap<String, Long>> calculateReport() throws FileNotFoundException {
 
         HashMap<String, HashMap<String, Long>> projectMap = new HashMap<>();
         List<String> times = new ArrayList<>();
@@ -91,7 +92,7 @@ public class ReportCalc {
         return projectMap;
     }
 
-    public Long sumPerProject(String projectName){
+    public Long sumPerProject(String projectName) throws FileNotFoundException {
         HashMap<String, HashMap<String, Long>> projectMap = calculateReport();
         HashMap<String, Long> tasksPerProject = projectMap.get(projectName);
         Long sumPerProject = Long.valueOf(0);

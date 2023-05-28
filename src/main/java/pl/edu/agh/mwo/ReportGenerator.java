@@ -1,10 +1,11 @@
 package pl.edu.agh.mwo;
 
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 
 public class ReportGenerator {
 
-    public void displayReport(ReportCalc reportCalc) {
+    public void displayReport(ReportCalc reportCalc) throws FileNotFoundException {
         HashMap<String, HashMap<String, Long>> data = reportCalc.calculateReport();
         System.out.printf("%-20s %-20s %20s", "NAZWA PROJEKTU", "NAZWA TASKA", "CZAS TRWANIA");
         System.out.println();
