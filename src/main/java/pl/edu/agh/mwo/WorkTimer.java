@@ -8,6 +8,8 @@ public class WorkTimer {
     public static void main(String[] args) throws FileNotFoundException {
 
         Commands commands = new Commands();
+        ReportGenerator reportGenerator = new ReportGenerator();
+        ReportCalc reportCalc = new ReportCalc();
 
         if (args.length != 0) {
             if (args[0].contains("start")
@@ -40,8 +42,7 @@ public class WorkTimer {
                 commands.list(args[1]);
             }
             else if (args[0].contains("report")) {
-                ReportCalc report = new ReportCalc();
-                report.calculateReport();
+                commands.report(reportGenerator, reportCalc);
             }
             else if (args[0].contains("file") && args[1].contains("-f")) {
                 commands.changeFile(args[2]);

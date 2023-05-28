@@ -102,6 +102,10 @@ public class Commands {
         envManager.setNewLogFileName(fileName);
     }
 
+    public void report(ReportGenerator reportGenerator, ReportCalc reportCalc) {
+        reportGenerator.displayReport(reportCalc);
+    }
+
     public List<Task> last(int count, boolean printResult) throws FileNotFoundException {
         List<Task> allTasksList = fileManager.getTasks();
         ArrayList<Task> filteredTasks = new ArrayList<>();
