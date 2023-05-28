@@ -12,24 +12,24 @@ public class WorkTimer {
             if (args[0].contains("start")
                     && args[1].contains("-p")
                     && args[3].contains("-t")) {
-                System.out.println("app started, start class to be called with two arguments (args[2] - project name,args[4] - task name)");
                 commands.start(args[2], args[4]);
             }
             else if (args[0].contains("stop")) {
                 commands.stop();
             }
             else if (args[0].contains("continue")) {
-                System.out.println("app started, buy without arguments, last run project");
             }
             else if (args[0].contains("last")) {
-                System.out.println("list of last tasks with indexes");
             }
             else if (args[0].contains("list")) {
-                System.out.println("list of all tasks");
+                commands.list(args[1]);
             }
             else if (args[0].contains("report")) {
                 ReportCalc report = new ReportCalc();
                 report.calculateReport();
+            }
+            else if (args[0].contains("file") && args[1].contains("-f")) {
+                commands.changeFile(args[2]);
             } else {
                 helpPrinter();
             }
@@ -47,6 +47,7 @@ public class WorkTimer {
                         "last: to display running tasks\n" +
                         "list: to display list of all tasks in time\n" +
                         "report: to display report of actions with summary\n" +
+                        "file -f \"newFilename.csv\": to change the source file\n" +
                         "help: to display all options\n"
 
         );

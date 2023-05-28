@@ -81,11 +81,17 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
-                "start=" + start +
-                ", stop=" + stop +
-                ", projectName='" + projectName + '\'' +
-                ", taskName='" + taskName + '\'' +
-                '}';
+        if(stop==null){
+            return start +
+                    "    " + "                   " +
+                    "           " + projectName +
+                    "          " + taskName;
+        } else {
+            return start +
+                    "    " + stop +
+                    "           " + projectName +
+                    "          " + taskName;
+        }
+
     }
 }
