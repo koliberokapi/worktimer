@@ -14,12 +14,13 @@ public class Commands {
 
 
     public void start(String projectName, String taskName) throws FileNotFoundException {
+        stop();
         File tasks = new File(LOG_FILE_PATH);
         LocalDateTime currentTime = LocalDateTime.now();
 
         String formatDateTime = currentTime.format(formatter);
         PrintWriter printWriter = new PrintWriter(new FileOutputStream(tasks, true));
-        printWriter.append(formatDateTime + "," + formatDateTime + "," + projectName + "," + taskName + "\n");
+        printWriter.append(formatDateTime + ",," + projectName + "," + taskName + "\n");
         printWriter.close();
     }
 
