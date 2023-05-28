@@ -15,6 +15,7 @@ public class Commands {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
     private static final String LOG_FILE_PATH = new EnvManager().getLogFilePath();
     private FileManager fileManager = new FileManager();
+    private EnvManager envManager = new EnvManager();
 
 
     public void start(String projectName, String taskName) throws FileNotFoundException {
@@ -96,4 +97,8 @@ public class Commands {
                 System.out.println("Please provide one of the parameters:\n --today\n --current-month\n --previous-month");
         }
     }
+    public void changeFile(String fileName) throws FileNotFoundException {
+        envManager.setNewLogFileName(fileName);
+    }
+
 }
