@@ -39,6 +39,7 @@ public class Main {
             }
             else if (args[0].contains("list")) {
                 System.out.println("list of all tasks");
+                commands.list(args[1]);
             }
             else if (args[0].contains("report")) {
                 System.out.println("report with args[1] without first two -- in argument of class");
