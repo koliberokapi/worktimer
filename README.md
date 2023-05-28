@@ -37,10 +37,7 @@ Aplikacja - rejestrator czasu pracy nad projektami
 
 
 ## Raporty
-- dla przedziałów czasowych: 
-   + raport dzienny
-   + raport za ostatni miesiąc (ostatnie 30 dni)
-   + raport za poprzedni miesiąc kalendarzowy
+
 
 | PROJEKT  | TASK  | CZAS PRACY |
 | :------------ |:---------------:| -----:|
