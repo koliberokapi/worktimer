@@ -2,23 +2,10 @@ package pl.edu.agh.mwo;
 
 import java.io.FileNotFoundException;
 
-public class Main {
-
-    public static void helpPrinter() {
-        System.out.println(
-                "Please use one of following arguments:\n" +
-                        "start -p \"Project Name\" -t \"Task Name\": to start new action, if project or task not exist it will be created automatically\n" +
-                        "stop: to stop action\n" +
-                        "continue: to continue last action\n" +
-                        "last: to display running tasks\n" +
-                        "list: to display list of all tasks in time\n" +
-                        "report: to display report of actions with summary\n" +
-                        "help: to display all options\n"
-
-        );
-    }
+public class WorkTimer {
 
     public static void main(String[] args) throws FileNotFoundException {
+
         Commands commands = new Commands();
 
         if (args.length != 0) {
@@ -49,5 +36,19 @@ public class Main {
         } else {
             helpPrinter();
         }
+
+    }
+    public static void helpPrinter() {
+        System.out.println(
+                "Please use one of following arguments:\n" +
+                        "start -p \"Project Name\" -t \"Task Name\": to start new action, if project or task not exist it will be created automatically\n" +
+                        "stop: to stop action\n" +
+                        "continue: to continue last action\n" +
+                        "last: to display running tasks\n" +
+                        "list: to display list of all tasks in time\n" +
+                        "report: to display report of actions with summary\n" +
+                        "help: to display all options\n"
+
+        );
     }
 }
