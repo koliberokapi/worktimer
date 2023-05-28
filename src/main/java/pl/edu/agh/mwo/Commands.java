@@ -18,6 +18,9 @@ public class Commands {
     private FileManager fileManager = new FileManager();
     private EnvManager envManager = new EnvManager();
 
+    public Commands() throws FileNotFoundException {
+    }
+
 
     public void start(String projectName, String taskName) throws FileNotFoundException {
         stop();
@@ -102,7 +105,7 @@ public class Commands {
         envManager.setNewLogFileName(fileName);
     }
 
-    public void report(ReportGenerator reportGenerator, ReportCalc reportCalc) {
+    public void report(ReportGenerator reportGenerator, ReportCalc reportCalc) throws FileNotFoundException {
         reportGenerator.displayReport(reportCalc);
     }
 
