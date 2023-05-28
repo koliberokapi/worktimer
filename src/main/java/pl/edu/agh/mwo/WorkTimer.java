@@ -13,9 +13,10 @@ public class WorkTimer {
 
         if (args.length != 0) {
             if (args[0].contains("start")
+                    && args.length==5
                     && args[1].contains("-p")
                     && args[3].contains("-t")
-                    && args.length==5) {
+            ) {
                 commands.start(args[2], args[4]);
             }
             else if (args[0].contains("stop")) {
