@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 import static java.time.temporal.TemporalAdjusters.firstDayOfMonth;
@@ -57,7 +58,7 @@ public class Commands {
                         "       start        "+
                                 "    " + "        stop        " +
                                 "        " + "project" +
-                                "        " + "description"
+                                "        " + "   task   "
                 );
                 for(Task task:allTasksList){
                     if(task.start.isAfter(currentDayStart)) {
@@ -70,7 +71,7 @@ public class Commands {
                         "       start        "+
                                 "    " + "        stop        " +
                                 "        " + "project" +
-                                "        " + "description"
+                                "        " + "   task   "
                 );
 
                 for(Task task:allTasksList){
@@ -84,7 +85,7 @@ public class Commands {
                         "       start        "+
                                 "    " + "        stop        " +
                                 "        " + "project" +
-                                "        " + "description"
+                                "        " + "   task   "
                 );
 
                 for(Task task:allTasksList){
@@ -101,4 +102,38 @@ public class Commands {
         envManager.setNewLogFileName(fileName);
     }
 
+    public List<Task> last(int count, boolean printResult) throws FileNotFoundException {
+        List<Task> allTasksList = fileManager.getTasks();
+        ArrayList<Task> filteredTasks = new ArrayList<>();
+
+        for (int index=allTasksList.size()-1; index>=0; index-=1) {
+            if (filteredTasks.size()<count){
+                filteredTasks.add(allTasksList.get(index));
+            } else {
+                break;
+            }
+        }
+        if (printResult) {
+        System.out.println(
+                "index"+
+                "        " + "project" +
+                "        " + "   task   "
+        );
+            for(int index=0; index<filteredTasks.size(); index+=1){
+                System.out.println(
+                        "  ["+index+"]"+
+                                "        " + filteredTasks.get(index).projectName +
+                                "        " + filteredTasks.get(index).taskName
+                );
+            }
+        }
+        return filteredTasks;
+    }
+
+    public void resume (int taskIndex) throws FileNotFoundException {
+        List<Task> taskList = last(taskIndex+1, false);
+        Task taskToContinue = taskList.get(taskIndex);
+
+        start(taskToContinue.projectName, taskToContinue.taskName);
+    }
 }
