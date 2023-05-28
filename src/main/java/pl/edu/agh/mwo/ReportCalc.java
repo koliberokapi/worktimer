@@ -90,6 +90,16 @@ public class ReportCalc {
         return projectMap;
     }
 
+    public Long sumPerProject(String projectName){
+        HashMap<String, HashMap<String, Long>> projectMap = calculateReport();
+        HashMap<String, Long> tasksPerProject = projectMap.get(projectName);
+        Long sumPerProject = Long.valueOf(0);
+        for(String e:tasksPerProject.keySet()){
+            sumPerProject = tasksPerProject.get(e) + sumPerProject;
+
+        }
+        return sumPerProject;
+    }
 }
 
 

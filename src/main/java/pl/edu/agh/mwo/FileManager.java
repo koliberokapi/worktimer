@@ -27,7 +27,6 @@ public class FileManager {
         int stopTimeColumnIndex = 1;
         try {
             List<String> lines = Files.readAllLines(Path.of(LOG_FILE_PATH));
-            System.out.println(lines);
             for (int rowIndex=1; rowIndex<lines.size(); rowIndex+=1) {
                 String line = lines.get(rowIndex);
                 String[] cells = line.split(",");

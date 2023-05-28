@@ -1,6 +1,7 @@
 package pl.edu.agh.mwo;
 
 import java.io.FileNotFoundException;
+import java.util.List;
 
 public class WorkTimer {
 
@@ -20,8 +21,22 @@ public class WorkTimer {
                 commands.stop();
             }
             else if (args[0].contains("continue")) {
+                int index;
+                if (args.length < 2) {
+                    index = 0;
+                } else {
+                    index = Integer.parseInt(args[1]);
+                }
+                commands.resume(index);
             }
             else if (args[0].contains("last")) {
+                int lastCount;
+                if (args.length < 2) {
+                    lastCount = 5;
+                } else {
+                    lastCount = Integer.parseInt(args[1]);
+                }
+                commands.last(lastCount, true);
             }
             else if (args[0].contains("list")) {
                 commands.list(args[1]);
@@ -37,7 +52,6 @@ public class WorkTimer {
         } else {
             helpPrinter();
         }
-
     }
     public static void helpPrinter() {
         System.out.println(
