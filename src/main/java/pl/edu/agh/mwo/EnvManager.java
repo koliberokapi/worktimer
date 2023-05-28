@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class EnvManager {
-    private static final String ENV_PATH = "datasource/env.properties";
+    private static final String ENV_PATH = "env.properties";
     private Properties properties;
 
     public EnvManager() {
